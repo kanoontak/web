@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کلاس سفالگری - کانون پرورش فکری کودکان و نوجوانان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* این بخش استایل کلی سایت است و با صفحه اصلی یکسان است */
+        :root {
+            --kanoon-green: #00897b;
+            --pastel-green: #e8f5e9;
+            --card-bg: #ffffff;
+            --light-text: #ffffff;
+            --dark-text: #2c3e50;
+            --poster-orange: #f39c12; 
+            --poster-orange-darker: #e67e22;
+            --highlight-bg: #fff9e6; /* رنگ پس‌زمینه بخش‌های هایلایت */
+        }
+
+        body {
+            background-image: url('images/books-pattern.png');
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-size: calc(100vw / 2) calc(100vh / 1);
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .page-container {
+            max-width: 1000px; /* عرض کمتر برای صفحات داخلی جهت خوانایی بهتر */
+            margin: 40px auto;
+            background-color: var(--card-bg); /* پس‌زمینه سفید برای محتوا */
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: var(--card-bg);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: var(--kanoon-green);
+            font-family: 'Lalezar', cursive;
+            font-weight: 400;
+            font-size: 2.2em; /* کمی کوچک‌تر در صفحات داخلی */
+            margin: 0;
+        }
+
+        .header .logo img {
+            max-height: 60px;
+        }
+        
+        .footer {
+            background-color: var(--kanoon-green);
+            color: var(--light-text);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer h2 {
+            font-family: 'Lalezar', cursive;
+            font-weight: 400;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--light-text);
+            margin: 0 15px;
+            transition: transform 0.2s ease;
+        }
+        .social-img-icon { height: 1em; width: auto; }
+        .social-links a:hover { transform: scale(1.2) rotate(5deg); }
+
+        /* === استایل‌های جدید مخصوص صفحات داخلی === */
+        .activity-content {
+            padding: 30px 40px;
+        }
+
+        .activity-content .main-title {
+            font-family: 'Lalezar', cursive;
+            font-size: 3.5em;
+            color: var(--kanoon-green);
+            text-align: center;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .activity-content .main-image {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .activity-content p {
+            font-size: 1.2em;
+            line-height: 2;
+            color: var(--dark-text);
+            text-align: justify;
+        }
+
+        /* استایل بخش‌های هایلایت شده */
+        .highlight-box {
+            background-color: var(--highlight-bg);
+            border-right: 6px solid var(--poster-orange);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 50px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .highlight-box h2 {
+            font-family: 'Lalezar', cursive;
+            font-size: 2.2em;
+            color: var(--dark-text);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box ul {
+            padding-right: 25px;
+            font-size: 1.1em;
+            line-height: 2;
+        }
+        
+        .highlight-box p {
+            font-size: 1.1em;
+            text-align: right;
+            line-height: 1.8;
+        }
+        
+        .back-link-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--kanoon-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #00695c;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1>کانون پرورش فکری (مرکز ۱ تاکستان)</h1>
+            <div class="logo">
+                <img src="images/logo.png" alt="لوگو کانون">
+            </div>
+        </header>
+
+        <main>
+            <div class="activity-content">
+                <h1 class="main-title">کلاس سفالگری</h1>
+                
+                <img src="https://placehold.co/900x400/8d6e63/ffffff?text=عکس+کلاس+سفالگری" alt="کودکان در حال کار با گل سفالگری" class="main-image">
+                
+                <p>
+                    به دنیای شگفت‌انگیز گِل و خلاقیت خوش آمدید! در کلاس سفالگری کانون، کودکان و نوجوانان یاد می‌گیرند که چطور با دستان خود به خاک بی‌جان، شکل و روح ببخشند و آثار هنری خلاقانه خلق کنند. این فعالیت نه تنها یک هنر سرگرم‌کننده است، بلکه به افزایش تمرکز، تقویت مهارت‌های حرکتی و پرورش خلاقیت کمک شایانی می‌کند. بچه‌ها در یک محیط دوستانه و امن، با چرخ سفالگری و تکنیک‌های ساخت دستی آشنا می‌شوند و در پایان دوره، آثار زیبای خود را به خانه می‌برند.
+                </p>
+
+                <div class="highlight-box">
+                    <h2>اهداف دوره</h2>
+                    <ul>
+                        <li>تقویت مهارت‌های حرکتی ظریف و هماهنگی بین چشم و دست</li>
+                        <li>افزایش قدرت تمرکز، صبر و پشتکار در کودکان</li>
+                        <li>پرورش خلاقیت، نوآوری و قدرت تجسم سه‌بعدی</li>
+                        <li>افزایش اعتماد به نفس از طریق خلق یک اثر هنری منحصر به فرد</li>
+                        <li>آشنایی با یک هنر اصیل و کهن ایرانی</li>
+                    </ul>
+                </div>
+                
+                <p>
+                    مربیان با تجربه ما قدم به قدم همراه بچه‌ها هستند تا اطمینان حاصل کنند هر کودک با توجه به توانایی‌های خود، بهترین تجربه را از کار با گِل به دست می‌آورد. این کلاس فرصتی است برای ابراز احساسات و ساختن چیزهایی که فقط در رویاهایشان وجود دارد.
+                </p>
+
+                <div class="highlight-box">
+                    <h2>شهریه و زمان‌بندی کلاس</h2>
+                    <p><strong>گروه سنی:</strong> ۷ تا ۱۷ سال</p>
+                    <p><strong>تعداد جلسات:</strong> ۸ جلسه (یک ماه)</p>
+                    <p><strong>شهریه دوره کامل:</strong> [مبلغ شهریه در اینجا نوشته شود] تومان</p>
+                    <p><strong>روزهای برگزاری:</strong> لطفاً برای اطلاع از نزدیک‌ترین زمان شروع کلاس و روزهای دقیق با مرکز تماس بگیرید.</p>
+                </div>
+                
+                <div class="back-link-container">
+                    <a href="index.html" class="back-link">&larr; بازگشت به لیست همه فعالیت‌ها</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <h2>ما را در شبکه‌های اجتماعی دنبال کنید</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/kanoon.tak1" target="_blank" title="اینستاگرام">
+                    <img src="images/instagram.png" alt="لوگوی اینستاگرام" class="social-img-icon">
+                </a>
+                <a href="https://shad.ir/Kpf_qz_tak1" target="_blank" title="شاد">
+                    <img src="images/shad-logo.png" alt="لوگوی شاد" class="social-img-icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
