@@ -21,7 +21,6 @@
             background-image: url('images/books-pattern.png');
             background-repeat: repeat;
             background-attachment: fixed;
-            /* UPDATED: اندازه پس‌زمینه به یک مقدار ثابت پیکسلی تغییر کرد */
             background-size: 600px;
             font-family: 'Vazirmatn', sans-serif;
             margin: 0;
@@ -30,7 +29,7 @@
 
         .page-container {
             max-width: 1200px;
-            margin: 20px auto; /* کاهش فاصله در موبایل */
+            margin: 20px auto;
             background-color: var(--pastel-green);
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
             border-radius: 25px;
@@ -39,31 +38,36 @@
 
         .header {
             background-color: var(--card-bg);
-            padding: 15px 20px; /* کاهش پدینگ در موبایل */
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 10;
         }
-
-        .header h1 {
+        
+        /* NEW: استایل جدید برای عنوان‌های هدر */
+        .header-title {
+            text-align: right;
+        }
+        .main-title {
+            display: block;
             color: var(--kanoon-green);
             font-family: 'Lalezar', cursive;
             font-weight: 400;
-            font-size: 1.5em; /* کاهش اندازه فونت عنوان در موبایل */
-            margin: 0;
+            font-size: 1.2em; /* اندازه عنوان اصلی در موبایل */
+            line-height: 1.3;
         }
+        .branch-title {
+            display: block;
+            font-size: 0.8em; /* اندازه عنوان مرکز در موبایل */
+            color: var(--dark-text);
+        }
+        /* End of NEW section */
 
         .header .logo img {
-            max-height: 50px; /* کاهش اندازه لوگو در موبایل */
+            max-height: 50px;
         }
 
-        .hero-poster {
-            padding: 0;
-        }
-        
         .hero-poster img {
             width: 100%;
             height: auto;
@@ -71,38 +75,27 @@
         }
         
         .activities {
-            padding: 30px 20px; /* کاهش پدینگ در موبایل */
+            padding: 30px 20px;
             text-align: center;
         }
 
         .activities > h2 {
             font-family: 'Lalezar', cursive;
             font-weight: 400;
-            font-size: 2.5em; /* کاهش اندازه فونت در موبایل */
+            font-size: 2.2em; /* UPDATED: اندازه متناسب‌تر در موبایل */
             color: var(--dark-text);
             margin-bottom: 30px;
         }
 
-        /* UPDATED: چیدمان جدید برای فعالیت‌ها */
         .activities-grid {
             display: grid;
-            gap: 15px; /* کاهش فاصله در موبایل */
-            /* حالت پیش‌فرض برای موبایل: ۲ ستون */
+            gap: 15px;
             grid-template-columns: repeat(2, 1fr);
         }
         
-        /* برای صفحه‌های بزرگ‌تر از ۱۱۰۰ پیکسل: ۴ ستون */
-        @media (min-width: 1100px) {
-            .activities-grid {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 25px; /* بازگرداندن فاصله در دسکتاپ */
-            }
-        }
-        /* End of UPDATED section */
-
         .activity-card {
             background-color: var(--card-bg);
-            border-radius: 15px; /* کاهش گردی گوشه‌ها در موبایل */
+            border-radius: 15px;
             padding: 15px; 
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -161,7 +154,7 @@
         .footer h2 {
             font-family: 'Lalezar', cursive;
             font-weight: 400;
-            font-size: 1.8em;
+            font-size: 1.6em; /* UPDATED: اندازه متناسب‌تر در موبایل */
             margin-bottom: 20px;
         }
 
@@ -179,49 +172,35 @@
             transform: scale(1.2) rotate(5deg);
         }
         
-        .social-img-icon {
-            height: 1em;
-            width: auto;
-        }
+        .social-img-icon { height: 1em; width: auto; }
         
-        /* NEW: کدهای واکنش‌گرا برای بازگرداندن اندازه‌ها در دسکتاپ */
+        /* کدهای واکنش‌گرا برای دسکتاپ */
         @media (min-width: 768px) {
-            .page-container {
-                margin: 40px auto;
-            }
-            .header {
-                padding: 20px 40px;
-            }
-            .header h1 {
-                font-size: 2.5em;
-            }
-            .header .logo img {
-                max-height: 70px;
-            }
-            .activities {
-                padding: 50px 40px;
-            }
-            .activities > h2 {
-                font-size: 3.5em;
-            }
-            .activity-card {
-                padding: 25px; 
-                border-radius: 20px;
-            }
-            .activity-icon {
-                font-size: 2.8em; 
-                margin-bottom: 15px;
-            }
-            .activity-card h3 {
-                font-size: 1.5em; 
-                margin: 10px 0 20px 0;
-            }
-            .btn {
-                padding: 14px 35px;
-                font-size: 1.1em;
-            }
-            .social-links a {
-                font-size: 3em;
+            .page-container { margin: 40px auto; }
+            .header { padding: 20px 40px; }
+            .header-title { text-align: right; }
+            /* بازگرداندن استایل تک خطی در دسکتاپ */
+            .main-title { display: inline; font-size: 2.5em; }
+            .branch-title { display: inline; font-size: 1.2rem; margin-right: 10px; }
+            .branch-title::before { content: '('; }
+            .branch-title::after { content: ')'; }
+            
+            .header .logo img { max-height: 70px; }
+            .activities { padding: 50px 40px; }
+            .activities > h2 { font-size: 3.5em; }
+            .footer h2 { font-size: 2em; }
+            .activity-card { padding: 25px; border-radius: 20px; }
+            .activity-icon { font-size: 2.8em; margin-bottom: 15px; }
+            .activity-card h3 { font-size: 1.5em; margin: 10px 0 20px 0; }
+            .btn { padding: 14px 35px; font-size: 1.1em; }
+            .social-links a { font-size: 3em; }
+        }
+
+        /* چیدمان ۴ ستونه در دسکتاپ */
+        @media (min-width: 1100px) {
+            .activities-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 25px;
             }
         }
     </style>
@@ -229,7 +208,10 @@
 <body>
     <div class="page-container">
         <header class="header">
-            <h1>کانون پرورش فکری (مرکز ۱ تاکستان)</h1>
+            <div class="header-title">
+                <span class="main-title">کانون پرورش فکری کودکان و نوجوانان</span>
+                <span class="branch-title">مرکز شماره یک تاکستان</span>
+            </div>
             <div class="logo">
                 <img src="images/logo.png" alt="لوگو کانون">
             </div>
@@ -239,7 +221,6 @@
             <section class="hero-poster">
                 <img src="images/free-time-poster.png" alt="پوستر اوقات فراغت کانون">
             </section>
-
             <section class="activities">
                 <h2>کلاس‌ها و فعالیت‌های ما</h2>
                 <div class="activities-grid">
@@ -264,16 +245,11 @@
                 </div>
             </section>
         </main>
-
         <footer class="footer">
             <h2>ما را در شبکه‌های اجتماعی دنبال کنید</h2>
             <div class="social-links">
-                <a href="https://www.instagram.com/kanoon.tak1" target="_blank" title="اینستاگرام">
-                    <img src="images/instagram.png" alt="لوگوی اینستاگرام" class="social-img-icon">
-                </a>
-                <a href="https://shad.ir/Kpf_qz_tak1" target="_blank" title="شاد">
-                    <img src="images/shad-logo.png" alt="لوگوی شاد" class="social-img-icon">
-                </a>
+                <a href="https://www.instagram.com/kanoon.tak1" target="_blank" title="اینستاگرام"><img src="images/instagram.png" alt="لوگوی اینستاگرام" class="social-img-icon"></a>
+                <a href="https://shad.ir/Kpf_qz_tak1" target="_blank" title="شاد"><img src="images/shad-logo.png" alt="لوگوی شاد" class="social-img-icon"></a>
             </div>
         </footer>
     </div>
