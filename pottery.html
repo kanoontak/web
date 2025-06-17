@@ -3,36 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کلاس سفالگری - کانون پرورش فکری کودکان و نوجوانان</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>کارگاه سفالگری - کانون پرورش فکری</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* این بخش استایل کلی سایت است و با صفحه اصلی یکسان است */
         :root {
             --kanoon-green: #00897b;
             --pastel-green: #e8f5e9;
             --card-bg: #ffffff;
             --light-text: #ffffff;
             --dark-text: #2c3e50;
-            --poster-orange: #f39c12; 
+            --poster-orange: #f39c12;
             --poster-orange-darker: #e67e22;
-            --highlight-bg: #fff9e6; /* رنگ پس‌زمینه بخش‌های هایلایت */
+            --highlight-bg: #fff9e6; 
         }
 
         body {
             background-image: url('images/books-pattern.png');
             background-repeat: repeat;
             background-attachment: fixed;
-            background-size: calc(100vw / 2) calc(100vh / 1);
+            background-size: 600px;
             font-family: 'Vazirmatn', sans-serif;
             margin: 0;
             background-color: #f0f0f0;
         }
 
         .page-container {
-            max-width: 1000px; /* عرض کمتر برای صفحات داخلی جهت خوانایی بهتر */
-            margin: 40px auto;
-            background-color: var(--card-bg); /* پس‌زمینه سفید برای محتوا */
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: var(--card-bg);
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
             border-radius: 25px;
             overflow: hidden;
@@ -40,88 +39,82 @@
 
         .header {
             background-color: var(--card-bg);
-            padding: 20px 40px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .header h1 {
-            color: var(--kanoon-green);
-            font-family: 'Lalezar', cursive;
-            font-weight: 400;
-            font-size: 2.2em; /* کمی کوچک‌تر در صفحات داخلی */
-            margin: 0;
-        }
+        .header-title { text-align: right; }
+        .main-title-header { display: block; color: var(--kanoon-green); font-family: 'Lalezar', cursive; font-weight: 400; font-size: 1.2em; line-height: 1.3; }
+        .branch-title-header { display: block; font-size: 0.8em; color: var(--dark-text); }
+        .header .logo img { max-height: 50px; }
+        .header .logo a { display: block; line-height: 0; }
 
-        .header .logo img {
-            max-height: 60px;
-        }
+        .activity-content { padding: 20px; }
         
-        .footer {
-            background-color: var(--kanoon-green);
-            color: var(--light-text);
-            padding: 30px;
-            text-align: center;
+        .activity-content h1 { 
+            font-family: 'Vazirmatn', sans-serif;
+            font-weight: 800;
+            font-size: 2.8em; 
+            color: var(--kanoon-green); 
+            text-align: center; 
+            display: block; 
+            margin: 20px 0 30px 0; 
         }
 
-        .footer h2 {
-            font-family: 'Lalezar', cursive;
-            font-weight: 400;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .social-links a {
-            color: var(--light-text);
-            margin: 0 15px;
-            transition: transform 0.2s ease;
-        }
-        .social-img-icon { height: 1em; width: auto; }
-        .social-links a:hover { transform: scale(1.2) rotate(5deg); }
-
-        /* === استایل‌های جدید مخصوص صفحات داخلی === */
-        .activity-content {
-            padding: 30px 40px;
-        }
-
-        .activity-content .main-title {
-            font-family: 'Lalezar', cursive;
-            font-size: 3.5em;
-            color: var(--kanoon-green);
-            text-align: center;
-            display: block;
-            margin-bottom: 30px;
-        }
-
-        .activity-content .main-image {
-            width: 100%;
+        /* UPDATED: استایل جدید برای لیست کارگاه‌ها */
+        .workshop-list {
+            background-color: var(--pastel-green);
             border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 40px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
         }
+        .workshop-item {
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .workshop-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .workshop-item h3 {
+            font-size: 1.4em;
+            font-weight: 800; /* عنوان بلد و مشخص */
+            color: var(--dark-text);
+            margin: 0 0 10px 0;
+        }
+        .workshop-item p { 
+            font-size: 1.1em; 
+            line-height: 1.8; 
+            color: var(--dark-text); 
+            margin: 5px 0; 
+        }
+        .workshop-item i { margin-left: 8px; color: var(--kanoon-green); }
 
-        .activity-content p {
-            font-size: 1.2em;
+        .activity-description {
+            font-size: 1.1em;
             line-height: 2;
             color: var(--dark-text);
             text-align: justify;
+            margin-bottom: 40px;
         }
 
-        /* استایل بخش‌های هایلایت شده */
         .highlight-box {
             background-color: var(--highlight-bg);
             border-right: 6px solid var(--poster-orange);
             border-radius: 10px;
             padding: 25px;
-            margin: 50px 0;
+            margin: 40px 0;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .highlight-box h2 {
             font-family: 'Lalezar', cursive;
-            font-size: 2.2em;
+            font-size: 2em;
             color: var(--dark-text);
             margin-top: 0;
             margin-bottom: 20px;
@@ -131,95 +124,183 @@
             padding-right: 25px;
             font-size: 1.1em;
             line-height: 2;
+            margin: 0;
         }
         
-        .highlight-box p {
-            font-size: 1.1em;
-            text-align: right;
-            line-height: 1.8;
+        /* UPDATED: استایل جدید و جذاب‌تر برای گالری عکس */
+        .image-gallery-container {
+            margin-top: 50px;
         }
-        
-        .back-link-container {
+        .image-gallery-container h2 {
+            font-family: 'Lalezar', cursive;
+            font-size: 2em;
+            color: var(--dark-text);
             text-align: center;
-            margin-top: 40px;
+            margin-bottom: 25px;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .image-frame {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.4s ease;
+        }
+        .image-frame:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .image-frame img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+		
+       .footer-navigation {
+           text-align: center;
+           margin-bottom: 20px;
+       }
+       .footer-navigation a {
+           display: inline-block;
+           padding: 10px 25px;
+           background-color: var(--poster-orange);
+           color: var(--light-text);
+           text-decoration: none;
+           border-radius: 10px;
+           font-size: 1em;
+           font-weight: 700;
+           transition: background-color 0.3s ease;
+       }
+       .footer-navigation a:hover {
+           background-color: var(--poster-orange-darker);
+       }
+        
+        .footer { background-color: var(--kanoon-green); color: var(--light-text); padding: 20px; text-align: center; margin-top: 40px; }
+        .footer h2 { font-family: 'Lalezar', cursive; font-weight: 400; font-size: 1.6em; margin-bottom: 20px; }
+        .social-links a { color: var(--light-text); margin: 0 15px; transition: transform 0.2s ease; font-size: 2.5em; display: inline-flex; align-items: center; justify-content: center; }
+        .social-img-icon { height: 1em; width: auto; }
+        .social-links a:hover { transform: scale(1.2) rotate(5deg); }
+        .contact-info { margin-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 25px; font-size: 0.9em; line-height: 1.8; }
+        .contact-info p { margin: 5px 0; }
+        .contact-info i { margin-left: 8px; }
+
+        @media (min-width: 768px) {
+            .page-container { margin: 40px auto; }
+            .header { padding: 20px 40px; }
+            .main-title-header { display: inline; font-size: 2.5em; }
+            .branch-title-header { display: inline; font-size: 1rem; margin-right: 10px; }
+            .branch-title-header::before { content: '('; }
+            .branch-title-header::after { content: ')'; }
+            .header .logo img { max-height: 70px; }
+            .activity-content { padding: 30px 40px; }
+            .activity-content h1 { font-size: 4em; }
+            .footer h2 { font-size: 2em; }
+            .social-links a { font-size: 3em; }
         }
 
-        .back-link {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--kanoon-green);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
+        /* چیدمان ستونی گالری و کارگاه‌ها در موبایل */
+        @media (max-width: 767px) {
+            .image-gallery { grid-template-columns: 1fr; }
+            .workshop-item h3 { font-size: 1.2em; }
+            .workshop-item p { font-size: 1em; }
         }
-        .back-link:hover {
-            background-color: #00695c;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
     </style>
 </head>
 <body>
     <div class="page-container">
         <header class="header">
-            <h1>کانون پرورش فکری (مرکز ۱ تاکستان)</h1>
+            <div class="header-title">
+                <span class="main-title-header">کانون پرورش فکری کودکان و نوجوانان</span>
+                <span class="branch-title-header">مرکز شماره یک تاکستان</span>
+            </div>
             <div class="logo">
-                <img src="images/logo.png" alt="لوگو کانون">
+                <a href="index.html"><img src="images/logo.png" alt="لوگو کانون"></a>
             </div>
         </header>
 
         <main>
             <div class="activity-content">
-                <h1 class="main-title">کلاس سفالگری</h1>
+                <h1>کارگاه سفالگری</h1>
                 
-                <img src="https://placehold.co/900x400/8d6e63/ffffff?text=عکس+کلاس+سفالگری" alt="کودکان در حال کار با گل سفالگری" class="main-image">
+                <div class="workshop-list">
+                    <div class="workshop-item">
+                        <h3>سفال کودک پسر (۸ تا ۱۱ سال)</h3>
+                        <p><i class="fas fa-calendar-alt"></i> <strong>روز برگزاری:</strong> یکشنبه / سه‌شنبه</p>
+                        <p><i class="fas fa-clock"></i> <strong>ساعت:</strong> ۹:۰۰ صبح الی ۱۰:۳۰ صبح</p>
+                        <p><i class="fas fa-money-bill-wave"></i> <strong>شهریه:</strong> ۸۰۰ هزار تومان (۱۶ جلسه)</p>
+                    </div>
+                    <div class="workshop-item">
+                        <h3>سفال نوجوان دختر (۱۲ تا ۱۵ سال)</h3>
+                        <p><i class="fas fa-calendar-alt"></i> <strong>روز برگزاری:</strong> شنبه / دوشنبه</p>
+                        <p><i class="fas fa-clock"></i> <strong>ساعت:</strong> ۸:۳۰ صبح الی ۱۰:۳۰ صبح</p>
+                        <p><i class="fas fa-money-bill-wave"></i> <strong>شهریه:</strong> ۸۰۰ هزار تومان (۱۶ جلسه)</p>
+                    </div>
+                     <div class="workshop-item">
+                        <h3>سفال کودک نونهال دختر (۹ تا ۱۱ سال)</h3>
+                        <p><i class="fas fa-calendar-alt"></i> <strong>روز برگزاری:</strong> شنبه / دوشنبه</p>
+                        <p><i class="fas fa-clock"></i> <strong>ساعت:</strong> ۹:۰۰ صبح الی ۱۰:۳۰ صبح</p>
+                        <p><i class="fas fa-money-bill-wave"></i> <strong>شهریه:</strong> ۸۰۰ هزار تومان (۱۶ جلسه)</p>
+                    </div>
+                     <div class="workshop-item">
+                        <h3>سفال کودک نوخوان دختر (۷ تا ۸ سال)</h3>
+                        <p><i class="fas fa-calendar-alt"></i> <strong>روز برگزاری:</strong> شنبه / دوشنبه</p>
+                        <p><i class="fas fa-clock"></i> <strong>ساعت:</strong> ۱۰:۳۰ صبح الی ۱۱:۳۰ صبح</p>
+                        <p><i class="fas fa-money-bill-wave"></i> <strong>شهریه:</strong> ۸۰۰ هزار تومان (۱۶ جلسه)</p>
+                    </div>
+                    <div class="workshop-item">
+                        <h3>سفال کودک خردسال (۵ تا ۶ سال)</h3>
+                        <p><i class="fas fa-calendar-alt"></i> <strong>روز برگزاری:</strong> یکشنبه‌ها</p>
+                        <p><i class="fas fa-clock"></i> <strong>ساعت:</strong> گروه‌های مختلف ۱۱ تا ۱۳</p>
+                        <p><i class="fas fa-money-bill-wave"></i> <strong>شهریه:</strong> ۶۰۰ هزار تومان (۱۰ جلسه)</p>
+                    </div>
+                </div>
                 
-                <p>
-                    به دنیای شگفت‌انگیز گِل و خلاقیت خوش آمدید! در کلاس سفالگری کانون، کودکان و نوجوانان یاد می‌گیرند که چطور با دستان خود به خاک بی‌جان، شکل و روح ببخشند و آثار هنری خلاقانه خلق کنند. این فعالیت نه تنها یک هنر سرگرم‌کننده است، بلکه به افزایش تمرکز، تقویت مهارت‌های حرکتی و پرورش خلاقیت کمک شایانی می‌کند. بچه‌ها در یک محیط دوستانه و امن، با چرخ سفالگری و تکنیک‌های ساخت دستی آشنا می‌شوند و در پایان دوره، آثار زیبای خود را به خانه می‌برند.
-                </p>
-
+                <div class="activity-description">
+                    <p>کارگاه سفالگری کانون، سفری جادویی به دنیای گِل و خلاقیت است. در این کلاس‌ها، کودکان و نوجوانان عزیز فرصت پیدا می‌کنند تا با دستان توانمند خود، به خاک بی‌جان، شکل و روح ببخشند و آثار هنری بی‌نظیری خلق کنند. این کارگاه نه تنها یک هنر سرگرم‌کننده، بلکه تمرینی برای افزایش تمرکز، تقویت مهارت‌های دستی و پرورش حس زیبایی‌شناسی است.</p>
+                </div>
+                
                 <div class="highlight-box">
-                    <h2>اهداف دوره</h2>
+                    <h2>اهداف کلی کارگاه‌های سفالگری</h2>
                     <ul>
                         <li>تقویت مهارت‌های حرکتی ظریف و هماهنگی بین چشم و دست</li>
-                        <li>افزایش قدرت تمرکز، صبر و پشتکار در کودکان</li>
+                        <li>افزایش قدرت تمرکز، صبر و پشتکار در شرکت‌کنندگان</li>
                         <li>پرورش خلاقیت، نوآوری و قدرت تجسم سه‌بعدی</li>
-                        <li>افزایش اعتماد به نفس از طریق خلق یک اثر هنری منحصر به فرد</li>
-                        <li>آشنایی با یک هنر اصیل و کهن ایرانی</li>
+                        <li>آشنایی با یک هنر اصیل و کهن ایرانی و کسب اعتماد به نفس</li>
                     </ul>
                 </div>
-                
-                <p>
-                    مربیان با تجربه ما قدم به قدم همراه بچه‌ها هستند تا اطمینان حاصل کنند هر کودک با توجه به توانایی‌های خود، بهترین تجربه را از کار با گِل به دست می‌آورد. این کلاس فرصتی است برای ابراز احساسات و ساختن چیزهایی که فقط در رویاهایشان وجود دارد.
-                </p>
 
-                <div class="highlight-box">
-                    <h2>شهریه و زمان‌بندی کلاس</h2>
-                    <p><strong>گروه سنی:</strong> ۷ تا ۱۷ سال</p>
-                    <p><strong>تعداد جلسات:</strong> ۸ جلسه (یک ماه)</p>
-                    <p><strong>شهریه دوره کامل:</strong> [مبلغ شهریه در اینجا نوشته شود] تومان</p>
-                    <p><strong>روزهای برگزاری:</strong> لطفاً برای اطلاع از نزدیک‌ترین زمان شروع کلاس و روزهای دقیق با مرکز تماس بگیرید.</p>
+                <div class="image-gallery-container">
+                    <h2>گالری تصاویر کارگاه</h2>
+                    <div class="image-gallery">
+                        <div class="image-frame">
+                            <img src="images/pottery-photo-1.jpg" alt="کودکان در حال سفالگری">
+                        </div>
+                        <div class="image-frame">
+                            <img src="images/pottery-photo-2.jpg" alt="آثار سفالی کودکان">
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="back-link-container">
-                    <a href="index.html" class="back-link">&larr; بازگشت به لیست همه فعالیت‌ها</a>
-                </div>
+
             </div>
         </main>
+		
+       <div class="footer-navigation">
+           <a href="../index.html">بازگشت به صفحه اصلی</a>
+       </div>
 
         <footer class="footer">
             <h2>ما را در شبکه‌های اجتماعی دنبال کنید</h2>
             <div class="social-links">
-                <a href="https://www.instagram.com/kanoon.tak1" target="_blank" title="اینستاگرام">
-                    <img src="images/instagram.png" alt="لوگوی اینستاگرام" class="social-img-icon">
-                </a>
-                <a href="https://shad.ir/Kpf_qz_tak1" target="_blank" title="شاد">
-                    <img src="images/shad-logo.png" alt="لوگوی شاد" class="social-img-icon">
-                </a>
+                <a href="https://www.instagram.com/kanoon.tak1" target="_blank" title="اینستاگرام"><img src="images/instagram.png" alt="لوگوی اینستاگرام" class="social-img-icon"></a>
+                <a href="https://shad.ir/Kpf_qz_tak1" target="_blank" title="شاد"><img src="images/shad-logo.png" alt="لوگوی شاد" class="social-img-icon"></a>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> <strong>آدرس:</strong> میدان بسیج - بلوار شهید رجایی - کوچه دولت ۱۱</p>
+                <p><i class="fas fa-phone"></i> <strong>تلفن:</strong> 35227967-028</p>
             </div>
         </footer>
     </div>
